@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="blue" type="color">#FF33B5E5</item>
+    <item name="translucentblue" type="color">#AA33B5E5</item>
+    <item name="gray" type="color">#FF888888</item>
+    <item name="transparent" type="color">#00000000</item>
+    <item name="lightwhite" type="color">#AAFFFFFF</item>
+    <item name="magenta" type="color">#FFFF00FF</item>
+    <item name="black" type="color">#FF000000</item>
+    <item name="darkgray" type="color">#FF444444</item>
+    <item name="yellow" type="color">#FFFFFF00</item>
+    <item name="green" type="color">#FF00FF00</item>
+    <item name="red" type="color">#FFFF0000</item>
+    <item name="translucent" type="color">#90000000</item>
+    <item name="darkactionbarcolor" type="color">#FF222222</item>
+    <item name="orange" type="color">#FFA000</item>
+    <item name="darkpink" type="color">#880E4F</item>
+    <item name="darkpurple" type="color">#303F9F</item>
+    <!-- Material design theme -->
+
+    <color name="primary">#1E88E5</color>
+    <color name="primary_dark">#1E88E5</color>
+    <color name="primary_light">#DD1E88E5</color>
+    <color name="blue_grey_dark">#37474F</color>
+    <color name="bright_red">#CCDD2C00</color>
+    <color name="white_translucent" type="color">#EEFFFFFF</color>
+    <color name="white_very_translucent" type="color">#90FFFFFF</color>
+    <color name="white" type="color">#FFFFFF</color>
+    <color name="translucent_light">#70000000</color>
+    <color name="translucent_very_light">#40000000</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="orange_700">#DD2C00</color>
+    <color name="materialorange_light">#DDFF6F00</color>
+    <color name="materialblue_light">#DD42A5F5</color>
+    <color name="materialteal_light">#AA004D40</color>
+    <color name="materialorange">#FF6F00</color>
+    <color name="materialblue">#42A5F5</color>
+
+    <color name="accent">#0091EA</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="navybluetranslucent">#AA353949</color>
+    <color name="materialwhite">#FFFFFF</color>
+    <color name="materialyellow">#FFB335</color>
+    <color name="materialgrey">#474648</color>
+    <color name="materialcyan_light">#900CCDCD</color>
+
+</resources>

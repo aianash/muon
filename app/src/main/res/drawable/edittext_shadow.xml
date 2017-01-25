@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- dropshadow -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#FF999999"
+                android:endColor="#FFFFFFFF"
+                android:angle="-90"/>
+        </shape>
+    </item>
+</layer-list>

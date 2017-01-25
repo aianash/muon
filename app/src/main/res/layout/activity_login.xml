@@ -1,11 +1,108 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:gravity="center"
+    tools:context=".LoginActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!-- Google Plus sign in-->
+    <!--com.google.android.gms.common.SignInButton
+        android:id="@+id/gplus_signin_button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp" /-->
+    <!-- Google Plus sign in-->
+
+    <!-- used here for tinting /-->
+    <TextView
+        android:id="@+id/login_tint"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucent_light" />
+
+    <!-- Facebook sign in-->
+    <!--<com.facebook.login.widget.LoginButton-->
+    <!--android:id="@+id/fb_signin_button"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_centerInParent="true" />-->
+    <!-- Facebook sign in-->
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/profile_image"-->
+    <!--android:layout_width="72dp"-->
+    <!--android:layout_height="72dp"-->
+    <!--app:civ_border_width="2dp"-->
+    <!--app:civ_border_color="#FFFFFFFF"/>-->
+
+    <TextView
+        android:id="@+id/welcome_quote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome_quote"
+        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/white"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:background="@color/translucent_very_light">
+
+        <TextView
+            android:id="@+id/login_with"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/login_with_text"
+            android:textSize="22sp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:background="@color/transparent" />
+
+        <com.shoplane.muon.common.utils.userinterface.CircleButton
+            android:id="@+id/fb_login_button"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            app:cb_color="#3b5998"
+            app:cb_pressedRingWidth="0dp" />
+
+        <com.shoplane.muon.common.utils.userinterface.CircleButton
+            android:id="@+id/gplus_login_button"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            app:cb_color="#dd4b39"
+            app:cb_pressedRingWidth="0dp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/skip_login_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:background="@xml/custom_transparent_button"
+        android:text="@string/take_tour"
+        android:textColor="@color/white" />
+
 
 </RelativeLayout>

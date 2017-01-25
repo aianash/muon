@@ -1,6 +1,88 @@
 <resources>
-    <string name="app_name">Muon</string>
+
+    <string name="app_name">Shoplane</string>
+    <string name="app_label">Shoplane</string>
+    <string name="title_activity_feed">FeedActivity</string>
+    <string name="title_activity_query">QueryActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="login_facebook">LOGIN WITH FACEBOOK</string>
+    <string name="login_gmail">LOGIN WITH GMAIL</string>
+    <string name="signin">SIGNIN</string>
+    <string name="signup">SIGNUP</string>
+    <string name="skip_login">SKIP LOGIN</string>
+    <string name="logout_from_google">LOGOUT FROM GOOGLE</string>
+    <string name="revoke_access_google">REVOKE ACCESS</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="newuser_register">New User? Register</string>
+    <string name="facebook_app_id">800587516688651</string>
+    <string name="user_signin">Sign In</string>
+    <string name="forgot_password">Forgot Password</string>
+
+    <!-- New Registration Strings -->
+    <string name="register_name">Name</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Password</string>
+    <string name="register_handle">Handle</string>
+    <string name="register">Register</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_wishlist">Wishlist</string>
+    <string name="action_cart">Cart</string>
+    <string name="action_shopplan">Shopplan</string>
+    <string name="action_signout">Sign Out</string>
+
+    <string name="search_hint">" I am looking for ..."</string>
+    <string name="search_hint_top">I AM LOOKING FOR </string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="clear_search_suggestions">Clear Search History</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_wishlist">WishlistActivity</string>
+    <string name="title_activity_shopplan">ShopplanActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_splash">Shoplane</string>
+    <string name="delete_from_cart">Remove</string>
+    <string name="create_shopplan">Create Shopplan</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="title_activity_user_register">UserRegisterActivity</string>
+    <string name="title_activity_forgot_pass">ForgotPassActivity</string>
+    <string name="title_activity_browser">BrowserActivity</string>
+
+    <string name="load_more">Load More</string>
+    <string name="load_filter">Load filter layout</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_item_detail">ItemDetailActivity</string>
+    <string name="item_detail_text">
+        ""
+    </string>
+    <string name="action_filter">Filter</string>
+    <string name="action_back">backtoitems</string>
+    <string name="action_signin">Sign In</string>
+    <string name="take_tour">Take a tour</string>
+    <string name="welcome_text_guest">Hello Guest</string>
+    <string name="login_with_text">Login with</string>
+    <string name="guest_default">Hello  Guest  !!!</string>
+    <string name="styleTips">STYLE TIPS</string>
+    <string name="filter_selected_textvie_text">Active Filters<Filters></Filters></string>
+    <string name="style_for_filter_text">STYLES FOR FILTER</string>
+    <string name="filter_title_text">Styles</string>
+    <string name="styles_suggested_for_you_text">STYLES SUGGESTED FOR YOU</string>
+    <string name="welcome_quote">shopping at any level is a bit of therapy</string>
+    <string name="splash_text">SHOPLANE</string>
+    <string name="splash_tag">Search Your Purpose Here</string>
+
 </resources>

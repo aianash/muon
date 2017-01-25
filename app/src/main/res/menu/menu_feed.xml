@@ -1,0 +1,28 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shoplane.muon.activities.FeedActivity">
+
+    <item
+        android:id="@+id/action_margin"
+        android:title=""
+        android:enabled="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_signout"
+        android:title="@string/action_signout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_signin"
+        android:title="@string/action_signin"
+        app:showAsAction="never" />
+
+</menu>

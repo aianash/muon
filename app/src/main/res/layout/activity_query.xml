@@ -1,0 +1,332 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/query_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/login_tint"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucent_very_light" />
+
+    <LinearLayout
+        android:id="@+id/query_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/style_navigator_layout"
+        android:background="@color/transparent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/searchbox_search_query_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edittext_style"
+            android:padding="5dp">
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginTop="5dp"-->
+
+            <com.shoplane.muon.common.utils.userinterface.MaterialEditText.MaterialEditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/searchbox_search_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="18sp"
+                app:met_baseColor="@color/blue_grey_dark"
+                app:met_clearButton="true"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelPadding="4dp"
+                app:met_floatingLabelText="@string/search_hint_top"
+                app:met_floatingLabelTextColor="@color/primary"
+                app:met_floatingLabelTextSize="12sp"
+                app:met_hideUnderline="true"
+                app:met_primaryColor="@color/primary"
+                app:met_textColor="@color/blue_grey_dark"
+                app:met_textColorHint="@color/primary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_content_text"
+            android:layout_width="fill_parent"
+            android:layout_height="24dp"
+            android:background="@color/white_translucent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/query_suggestion_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_sharp_corners"
+                android:clipToPadding="true"
+                android:divider="@color/white"
+                android:dividerHeight="0dp"
+                android:paddingBottom="1dp"
+                android:scrollbars="none" />
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_filter_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_toStartOf="@+id/floating_search_button"
+                android:src="@drawable/ic_filter"
+                android:visibility="gone"
+                android.support.design:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_action_search"
+                android.support.design:fabSize="mini" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/style_navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:weightSum="10"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/style_filter_gridview"-->
+                <!--android:baselineAligned="false"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="10">-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginEnd="2dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="4"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/styles_for_filter"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="24dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:background="@drawable/style_sharp_corners"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:focusable="false"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:focusableInTouchMode="false"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:fontFamily="sans-serif"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:paddingEnd="5dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:paddingStart="5dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="@string/style_for_filter_text"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/primary"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ListView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/style_to_filter_list"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:background="@drawable/style_sharp_corners"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:clipToPadding="true"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:divider="@color/white"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:dividerHeight="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:scrollbars="none" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="10"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/filters_selected_textview"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="24dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:background="@drawable/style_sharp_corners"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:focusable="false"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:focusableInTouchMode="false"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:fontFamily="sans-serif"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:paddingEnd="5dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:paddingStart="5dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="@string/filter_selected_textvie_text"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/primary"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<android.support.v7.widget.RecyclerView&ndash;&gt;-->
+                        <!--&lt;!&ndash;xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/filter_selection_gridview"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:paddingTop="15dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:background="@drawable/style_sharp_corners"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:scrollbars="none" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/navigator_view"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/abc_action_bar_default_height_material"
+                android:background="@drawable/style_sharp_corners"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <ImageButton
+                    android:id="@+id/style_back_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@xml/custom_transparent_button"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <TextView
+                    android:id="@+id/style_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="@string/filter_title_text"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/style_forward_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@xml/custom_transparent_button"
+                    android:src="@drawable/ic_forward_arrow" />
+
+                <ImageButton
+                    android:id="@+id/style_down_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@xml/custom_transparent_button"
+                    android:src="@drawable/ic_forward_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/filtetitle_tab_separator"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/edittext_shadow" />
+
+            <com.shoplane.muon.common.utils.userinterface.SlidingTabLayout
+                android:id="@+id/filter_tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_sharp_corners" />
+
+            <View
+                android:id="@+id/filtertab_value_separator"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/edittext_shadow" />
+
+
+            <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/filter_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@color/transparent" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/filter_apply_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android.support.design:fabSize="mini" />
+
+
+        </LinearLayout>
+
+        <!--<com.shoplane.muon.common.utils.userinterface.CircleButton xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/style_down_button"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_margin="4dp"-->
+            <!--app:cb_color="@color/primary"-->
+            <!--app:cb_pressedRingWidth="0dp" />-->
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/style_down_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android.support.design:fabSize="mini" />-->
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/filter_apply_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android.support.design:fabSize="mini" />-->
+    </LinearLayout>
+
+</RelativeLayout>

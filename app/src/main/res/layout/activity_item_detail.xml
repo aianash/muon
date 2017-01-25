@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="com.shoplane.muon.activities.ItemDetailActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_title_brand"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/materialblue_light"
+                android:focusable="false"
+                android:lineSpacingMultiplier="1.4"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:paddingLeft="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/item_image_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_below="@+id/image_tabs">
+                </android.support.v4.view.ViewPager>
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/item_image_pager_indicator"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:padding="4dp"
+                    android:layout_gravity="bottom|center"
+                    app:fillColor="@color/materialblue_light"
+                    app:strokeColor="@color/materialblue_light"/>
+
+                <com.shoplane.muon.common.utils.userinterface.CircleButton
+                    android:id="@+id/open_browser_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|right"
+                    app:cb_color="@color/white_very_translucent"
+                    app:cb_pressedRingWidth="0dp"
+                    android:layout_margin="6dp" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/product_title_group_price_gender_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/materialorange_light"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:paddingLeft="5dp"
+                android:text="SPECS"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/product_title_group_price_gender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="textMultiLine"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingLeft="5dp"
+                android:text="@string/item_detail_text"
+                android:textColor="@color/blue_grey_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/product_sizes_head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/materialorange_light"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:paddingLeft="5dp"
+                android:text="SIZES"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/product_sizes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                android:text="@string/item_detail_text"
+                android:textColor="@color/blue_grey_dark"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/product_colors_head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/materialorange_light"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                android:text="COLORS"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/product_colors"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                android:text="@string/item_detail_text"
+                android:textColor="@color/blue_grey_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/product_description_head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/materialorange_light"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:paddingLeft="5dp"
+                android:text="DESCRIPTION"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/product_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="5dp"
+                android:text="@string/item_detail_text"
+                android:textColor="@color/blue_grey_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/product_styletips_head"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/materialorange_light"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:paddingLeft="5dp"
+                android:text="@string/styleTips"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/product_styletips"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:background="@color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="5dp"
+                android:text="@string/item_detail_text"
+                android:textColor="@color/blue_grey_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

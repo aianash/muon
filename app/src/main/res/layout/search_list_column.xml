@@ -1,0 +1,67 @@
+<FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_list_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:background="@color/transparent">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/search_list_column_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/search_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/materialblue_light"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:lineSpacingMultiplier="1.4"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:paddingLeft="5dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <com.shoplane.muon.common.utils.userinterface.CircleButton
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/search_item_browser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            app:cb_color="@color/white_very_translucent"
+            app:cb_pressedRingWidth="0dp"
+            android:layout_margin="6dp" />
+
+        <TextView
+            android:id="@+id/search_item_specs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/materialorange_light"
+            android:focusable="false"
+            android:lineSpacingMultiplier="1.4"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

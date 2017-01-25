@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/style_to_filter_item"
+        android:layout_width="fill_parent"
+        android:layout_height="32.5dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</FrameLayout>
